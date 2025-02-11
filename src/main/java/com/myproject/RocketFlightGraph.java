@@ -5,6 +5,11 @@ import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.print.*;
 import org.jfree.chart.ChartFactory;
+import org.jfree.chart.plot.XYPlot;
+import org.jfree.chart.ui.RectangleAnchor;
+import org.jfree.chart.ui.TextAnchor;
+import org.jfree.chart.annotations.XYTextAnnotation;
+import org.jfree.chart.plot.ValueMarker;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.data.xy.XYSeries;
@@ -193,9 +198,33 @@ public class RocketFlightGraph extends JFrame {
         }
         XYSeriesCollection dataset = new XYSeriesCollection(series);
         JFreeChart chart = ChartFactory.createXYLineChart(
-                "Altitude vs Time (Max: " + String.format("%.2f", maxAltitude) + " ft)", 
+                "Altitude vs Time (Max: " + String.format("%.2f", maxAltitude) + " ft)",
                 "Time (ms)", "Altitude (ft)", dataset
         );
+        
+        XYPlot plot = chart.getXYPlot();
+        for (int i = 0; i < times.size(); i++) {
+            if (events.get(i) != 0) {
+                Color eventColor;
+                String eventLabel;
+                switch (events.get(i)) {
+                    case 2: eventColor = Color.ORANGE; eventLabel = "Apogee"; break;
+                    case 13: eventColor = Color.GREEN; eventLabel = "Launch"; break;
+                    case 15: eventColor = Color.BLUE; eventLabel = "Burnout"; break;
+                    case 17: eventColor = Color.MAGENTA; eventLabel = "Landing"; break;
+                    default: eventColor = Color.RED; eventLabel = "Event " + events.get(i); break;
+                }
+                
+                ValueMarker marker = new ValueMarker(times.get(i));
+                marker.setPaint(eventColor);
+                marker.setStroke(new BasicStroke(1.5f));
+                marker.setLabel(eventLabel);
+                marker.setLabelAnchor(RectangleAnchor.TOP_LEFT);
+                marker.setLabelTextAnchor(TextAnchor.TOP_RIGHT);
+                plot.addDomainMarker(marker);
+            }
+        }
+        
         return chart;
     }
 
@@ -248,8 +277,36 @@ public class RocketFlightGraph extends JFrame {
             altitudeSeries.add(times.get(i), altitudes.get(i));
         }
         double maxAltitude = altitudes.stream().mapToDouble(v -> v).max().orElse(0);
-        altitudeChartPanel.setChart(ChartFactory.createXYLineChart(
-                "Altitude vs Time (Max: " + String.format("%.2f", maxAltitude) + " ft)", "Time (ms)", "Altitude (ft)", new XYSeriesCollection(altitudeSeries)));
+        JFreeChart chart = ChartFactory.createXYLineChart(
+                "Altitude vs Time (Max: " + String.format("%.2f", maxAltitude) + " ft)",
+                "Time (ms)",
+                "Altitude (ft)",
+                new XYSeriesCollection(altitudeSeries));
+        altitudeChartPanel.setChart(chart);
+        
+        // Add event markers
+        XYPlot plot = chart.getXYPlot();
+        for (int i = 0; i < times.size(); i++) {
+            if (events.get(i) != 0) {
+                Color eventColor;
+                String eventLabel;
+                switch (events.get(i)) {
+                    case 2: eventColor = Color.ORANGE; eventLabel = "Apogee"; break;
+                    case 13: eventColor = Color.GREEN; eventLabel = "Launch"; break;
+                    case 15: eventColor = Color.BLUE; eventLabel = "Burnout"; break;
+                    case 17: eventColor = Color.MAGENTA; eventLabel = "Landing"; break;
+                    default: eventColor = Color.RED; eventLabel = "Event " + events.get(i); break;
+                }
+                
+                ValueMarker marker = new ValueMarker(times.get(i));
+                marker.setPaint(eventColor);
+                marker.setStroke(new BasicStroke(1.5f));
+                marker.setLabel(eventLabel);
+                marker.setLabelAnchor(RectangleAnchor.TOP_LEFT);
+                marker.setLabelTextAnchor(TextAnchor.TOP_RIGHT);
+                plot.addDomainMarker(marker);
+            }
+        }
 
         XYSeries velocitySeries = new XYSeries("Velocity vs Time");
         for (int i = lowerIndex; i <= upperIndex; i++) {
