@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.myproject.AppTest" time="0.016" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.myproject.AppTest" time="0.013" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\Users\lione\OneDrive\QRS\RocketFlightGraph\target\test-classes;C:\Users\lione\OneDrive\QRS\RocketFlightGraph\target\classes;C:\Users\lione\.m2\repository\org\jfree\jfreechart\1.5.3\jfreechart-1.5.3.jar;C:\Users\lione\.m2\repository\org\json\json\20210307\json-20210307.jar;C:\Users\lione\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;C:\Users\lione\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.13.4\jackson-databind-2.13.4.jar;C:\Users\lione\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.13.4\jackson-annotations-2.13.4.jar;C:\Users\lione\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.13.4\jackson-core-2.13.4.jar;"/>
+    <property name="java.class.path" value="c:\Users\lione\OneDrive\Documents\GitHub\RocketFlightGraph\target\test-classes;c:\Users\lione\OneDrive\Documents\GitHub\RocketFlightGraph\target\classes;C:\Users\lione\.m2\repository\org\jfree\jfreechart\1.5.3\jfreechart-1.5.3.jar;C:\Users\lione\.m2\repository\org\json\json\20210307\json-20210307.jar;C:\Users\lione\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;C:\Users\lione\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.13.4\jackson-databind-2.13.4.jar;C:\Users\lione\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.13.4\jackson-annotations-2.13.4.jar;C:\Users\lione\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.13.4\jackson-core-2.13.4.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -15,9 +15,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="AU"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
-    <property name="sun.java.command" value="C:\Users\lione\AppData\Local\Temp\surefire15522549578955903964\surefirebooter-20250211194010561_3.jar C:\Users\lione\AppData\Local\Temp\surefire15522549578955903964 2025-02-11T19-40-10_368-jvmRun1 surefire-20250211194010561_1tmp surefire_0-20250211194010561_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\lione\AppData\Local\Temp\surefire11588291298298425934\surefirebooter-20250211201111000_3.jar C:\Users\lione\AppData\Local\Temp\surefire11588291298298425934 2025-02-11T20-11-10_827-jvmRun1 surefire-20250211201111000_1tmp surefire_0-20250211201111000_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\Users\lione\OneDrive\QRS\RocketFlightGraph\target\test-classes;C:\Users\lione\OneDrive\QRS\RocketFlightGraph\target\classes;C:\Users\lione\.m2\repository\org\jfree\jfreechart\1.5.3\jfreechart-1.5.3.jar;C:\Users\lione\.m2\repository\org\json\json\20210307\json-20210307.jar;C:\Users\lione\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;C:\Users\lione\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.13.4\jackson-databind-2.13.4.jar;C:\Users\lione\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.13.4\jackson-annotations-2.13.4.jar;C:\Users\lione\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.13.4\jackson-core-2.13.4.jar;"/>
+    <property name="surefire.test.class.path" value="c:\Users\lione\OneDrive\Documents\GitHub\RocketFlightGraph\target\test-classes;c:\Users\lione\OneDrive\Documents\GitHub\RocketFlightGraph\target\classes;C:\Users\lione\.m2\repository\org\jfree\jfreechart\1.5.3\jfreechart-1.5.3.jar;C:\Users\lione\.m2\repository\org\json\json\20210307\json-20210307.jar;C:\Users\lione\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;C:\Users\lione\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.13.4\jackson-databind-2.13.4.jar;C:\Users\lione\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.13.4\jackson-annotations-2.13.4.jar;C:\Users\lione\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.13.4\jackson-core-2.13.4.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\lione"/>
     <property name="user.language" value="en"/>
@@ -25,12 +25,12 @@
     <property name="java.version.date" value="2024-07-16"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-17"/>
     <property name="file.separator" value="\"/>
-    <property name="basedir" value="C:\Users\lione\OneDrive\QRS\RocketFlightGraph"/>
+    <property name="basedir" value="c:\Users\lione\OneDrive\Documents\GitHub\RocketFlightGraph"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\lione\AppData\Local\Temp\surefire15522549578955903964\surefirebooter-20250211194010561_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\lione\AppData\Local\Temp\surefire11588291298298425934\surefirebooter-20250211201111000_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.12+8-LTS-286"/>
@@ -44,7 +44,7 @@
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="C:\Users\lione\AppData\Local\Temp\"/>
     <property name="java.version" value="17.0.12"/>
-    <property name="user.dir" value="C:\Users\lione\OneDrive\QRS\RocketFlightGraph"/>
+    <property name="user.dir" value="c:\Users\lione\OneDrive\Documents\GitHub\RocketFlightGraph"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
@@ -56,5 +56,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testApp" classname="com.myproject.AppTest" time="0.016"/>
+  <testcase name="testApp" classname="com.myproject.AppTest" time="0.013"/>
 </testsuite>
