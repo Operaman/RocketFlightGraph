@@ -142,7 +142,7 @@ public class RocketFlightGraph extends JFrame {
 
     private void calculateVelocities() {
         velocities.clear();
-        int windowSize = 16; // Number of samples to smooth over
+        int windowSize = 8; // Number of samples to smooth over
         for (int i = 0; i < times.size(); i++) {
             double smoothedVelocity = 0.0;
             int count = 0;
